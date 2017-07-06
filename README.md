@@ -67,7 +67,7 @@ Use `HANSON.convert` to convert HanSON text to ye old' JSON text:
 }
 ```
 
-Use 'HANSON.parse' instead of 'JSON.parse' to parse text to ruby:
+Use `HANSON.parse` instead of `JSON.parse` to parse text to ruby hash / array / etc.:
 
 ``` ruby
 {
