@@ -3,6 +3,8 @@ Manifest.txt
 README.md
 Rakefile
 lib/jasony.rb
+lib/jasony/parser/hanson.rb
 lib/jasony/version.rb
 test/helper.rb
+test/test_parser.rb
 test/test_version.rb

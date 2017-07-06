@@ -6,12 +6,8 @@ require 'pp'
 
 # our own code
 require 'jasony/version'   # note: let version always go first
+require 'jasony/parser/hanson'
 
-
-
-module HANSON
-
-end  # module HANSON
 
 
 
