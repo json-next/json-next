@@ -2,7 +2,7 @@
 
 ###
 #  to run use
-#     ruby -I ./lib -I ./test test/test_parser.rb
+#     ruby -I ./lib -I ./test test/test_parser_hanson.rb
 
 
 require 'helper'
