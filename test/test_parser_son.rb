@@ -11,31 +11,12 @@ require 'helper'
 class TestParserSon < MiniTest::Test
 
   def test_son
-    exp_sample1 = {
-       "name"=>"Alexander Grothendieck",
-       "fields"=>"mathematics",
-       "main_topics"=>
-         ["Etale cohomology", "Motives", "Topos theory", "Schemes"]
-    }
 
-    sample1 =<<TXT
-     {
-        # Personal information
-
-        "name": "Alexander Grothendieck"
-        "fields": "mathematics"
-        "main_topics": [
-            "Etale cohomology"
-            "Motives"
-            "Topos theory"
-            "Schemes"
-        ]
-    }
-TXT
+    sample1, exp1 = TestBlockFile.read_utf8( 'son1' )
 
     puts SON.convert( sample1 )
 
-    assert_equal exp_sample1, SON.parse( sample1 )
+    assert_equal eval(exp1), SON.parse( sample1 )
   end
 
 end

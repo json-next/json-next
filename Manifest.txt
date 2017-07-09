@@ -8,6 +8,11 @@ lib/json/next/parser/hanson.rb
 lib/json/next/parser/son.rb
 lib/json/next/pattern.rb
 lib/json/next/version.rb
+test/data/commata1.txt
+test/data/commata2a.txt
+test/data/commata2b.txt
+test/data/hanson1.txt
+test/data/son1.txt
 test/helper.rb
 test/test_commata.rb
 test/test_parser_hanson.rb
