@@ -71,19 +71,19 @@ TXT
     }
 
 
-    sample1b = Jasony::Commata.convert( sample1a, debug: true )
+    sample1b = JSON::Next::Commata.convert( sample1a, debug: true )
     puts sample1b
 
     assert_equal exp_sample1b, JSON.parse( sample1b )
 
 
-    sample2b = Jasony::Commata.convert( sample2a, debug: true )
+    sample2b = JSON::Next::Commata.convert( sample2a, debug: true )
     puts sample2b
 
     assert_equal exp_sample2b, JSON.parse( sample2b )
 
 
-    sample2b1 = Jasony::Commata.convert( sample2a1, debug: true )
+    sample2b1 = JSON::Next::Commata.convert( sample2a1, debug: true )
     puts sample2b1
 
     assert_equal exp_sample2b, JSON.parse( sample2b1 )

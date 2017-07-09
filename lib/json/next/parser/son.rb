@@ -8,9 +8,9 @@
 module SON
 
 
-  DOUBLE_QUOTE      = Jasony::DOUBLE_QUOTE
+  DOUBLE_QUOTE      = JSON::Next::DOUBLE_QUOTE
 
-  SHELL_COMMENT     = Jasony::SHELL_COMMENT
+  SHELL_COMMENT     = JSON::Next::SHELL_COMMENT
 
 
   def self.strip_comments( text )   ## pass 1
@@ -33,7 +33,7 @@ module SON
     # text is the SON string to convert.
 
     text = strip_comments( text )    ## pass 1
-    text = Jasony::Commata.convert( text )  ## pass 2 - auto-add (missing optional) commas
+    text = JSON::Next::Commata.convert( text )  ## pass 2 - auto-add (missing optional) commas
     text
   end
 

@@ -1,6 +1,7 @@
 # encoding: utf-8
 
-module Jasony
+module JSON
+  module Next
 
 
 ### auto-add commas for objects and arrays
@@ -165,4 +166,6 @@ end
 
 end  # class Commata
 
-end # module Jasony
+
+  end # module Next
+end # module JSON

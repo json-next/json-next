@@ -13,23 +13,23 @@ class TestVersion < MiniTest::Test
 
   def test_version
 
-    pp Jasony::UNESCAPE_MAP
-    pp Jasony::ML_ESCAPE_MAP
+    pp JSON::Next::UNESCAPE_MAP
+    pp JSON::Next::ML_ESCAPE_MAP
 
-    pp Jasony::BACKTICK_ML_QUOTE
-    puts Jasony::BACKTICK_ML_QUOTE
-    pp Jasony::SINGLE_QUOTE
-    puts Jasony::SINGLE_QUOTE
-    pp Jasony::DOUBLE_QUOTE
-    puts Jasony::DOUBLE_QUOTE
+    pp JSON::Next::BACKTICK_ML_QUOTE
+    puts JSON::Next::BACKTICK_ML_QUOTE
+    pp JSON::Next::SINGLE_QUOTE
+    puts JSON::Next::SINGLE_QUOTE
+    pp JSON::Next::DOUBLE_QUOTE
+    puts JSON::Next::DOUBLE_QUOTE
 
-    pp Jasony::CLANG_ML_COMMENT
-    puts Jasony::CLANG_ML_COMMENT
-    pp Jasony::CLANG_COMMENT
-    puts Jasony::CLANG_COMMENT
+    pp JSON::Next::CLANG_ML_COMMENT
+    puts JSON::Next::CLANG_ML_COMMENT
+    pp JSON::Next::CLANG_COMMENT
+    puts JSON::Next::CLANG_COMMENT
 
 
-    puts Jasony::VERSION
+    puts JSON::Next::VERSION
     assert true
     ## assume everything ok if get here
   end

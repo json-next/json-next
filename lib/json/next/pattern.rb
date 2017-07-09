@@ -1,6 +1,7 @@
 # encoding: utf-8
 
-module Jasony
+module JSON
+  module Next
 
   ## note: regex pattern \\ needs to get escaped twice, thus, \\.
   ##  and for literal \\ use \\\\\.
@@ -122,5 +123,5 @@ module Jasony
   }
 
 
-
-end # module Jasony
+  end # module Next
+end # module JSON

@@ -1,12 +1,12 @@
-# jasony
+# json-next
 
-jasony gem -  read generation y / next generation json versions (HanSON, SON, etc.) with comments, unquoted keys, multi-line strings, trailing commas, optional commas, and more
+json-next gem -  read generation y / next generation json versions (HanSON, SON, etc.) with comments, unquoted keys, multi-line strings, trailing commas, optional commas, and more
 
 
-* home  :: [github.com/datatxt/jasony](https://github.com/datatxt/jasony)
-* bugs  :: [github.com/datatxt/jasony/issues](https://github.com/datatxt/jasony/issues)
-* gem   :: [rubygems.org/gems/jasony](https://rubygems.org/gems/jasony)
-* rdoc  :: [rubydoc.info/gems/jasony](http://rubydoc.info/gems/jasony)
+* home  :: [github.com/datatxt/json-next](https://github.com/datatxt/json-next)
+* bugs  :: [github.com/datatxt/json-next/issues](https://github.com/datatxt/json-next/issues)
+* gem   :: [rubygems.org/gems/json-next](https://rubygems.org/gems/json-next)
+* rdoc  :: [rubydoc.info/gems/json-next](http://rubydoc.info/gems/json-next)
 
 
 
@@ -158,7 +158,7 @@ Use `SON.parse` instead of `JSON.parse` to parse text to ruby hash / array / etc
 
 
 ``` ruby
-require 'jasony'
+require 'json/next'
 
 text1 =<<TXT
 {
@@ -248,7 +248,7 @@ See the [Awesome JSON (What's Next?)](https://github.com/datatxt/awesome-json-ne
 
 ![](https://publicdomainworks.github.io/buttons/zero88x31.png)
 
-The `jasony` scripts are dedicated to the public domain.
+The `json-next` scripts are dedicated to the public domain.
 Use it as you please with no restrictions whatsoever.
 
 ## Questions? Comments?

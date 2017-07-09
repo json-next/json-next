@@ -1,6 +1,8 @@
 # encoding: utf-8
 
-module Jasony
+module JSON
+  module Next
+
   MAJOR = 1    ## todo: namespace inside version or something - why? why not??
   MINOR = 1
   PATCH = 0
@@ -11,10 +13,12 @@ module Jasony
   end
 
   def self.banner
-    "jasony/#{VERSION} on Ruby #{RUBY_VERSION} (#{RUBY_RELEASE_DATE}) [#{RUBY_PLATFORM}]"
+    "json-next/#{VERSION} on Ruby #{RUBY_VERSION} (#{RUBY_RELEASE_DATE}) [#{RUBY_PLATFORM}]"
   end
 
   def self.root
-    "#{File.expand_path( File.dirname(File.dirname(File.dirname(__FILE__))) )}"
+    "#{File.expand_path( File.dirname(File.dirname(File.dirname(File.dirname(__FILE__)))) )}"
   end
-end # module Jasony
+
+  end # module Next
+end # module JSON
