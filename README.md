@@ -1,6 +1,6 @@
 # jasony
 
-jasony gem -  read generation y / next generation json versions with comments, unquoted keys, multi-line strings, trailing commas, and more
+jasony gem -  read generation y / next generation json versions (HanSON, SON, etc.) with comments, unquoted keys, multi-line strings, trailing commas, optional commas, and more
 
 
 * home  :: [github.com/datatxt/jasony](https://github.com/datatxt/jasony)
@@ -11,7 +11,11 @@ jasony gem -  read generation y / next generation json versions with comments, u
 
 
 
-## Usage - `HANSON.parse`
+## Usage - `HANSON.parse`,  `SON.parse`
+
+[HanSON](#hanson) •
+[SON](#son)
+
 
 ### HanSON
 
@@ -84,13 +88,79 @@ Use `HANSON.parse` instead of `JSON.parse` to parse text to ruby hash / array / 
 ```
 
 
-**Live Example**
+
+### SON
+
+_SON - Simple Object Notation by Aleksander Gurin et al_
+
+Simple data format similar to JSON, but with some minor changes:
+
+- comments starts with `#` sign and ends with newline (`\n`)
+- comma after an object key-value pair is optional
+- comma after an array item is optional
+
+JSON is compatible with SON in a sense that
+JSON data is also SON data, but not vise versa.
+
+Example:
+
+```
+{
+  # Personal information
+
+  "name": "Alexander Grothendieck"
+  "fields": "mathematics"
+  "main_topics": [
+    "Etale cohomology"
+    "Motives"
+    "Topos theory"
+    "Schemes"
+  ]
+  "numbers": [1 2 3 4]
+  "mixed": [1.1 -2 true false null]
+}
+```
+
+Use `SON.convert` to convert SON text to ye old' JSON text:
+
+``` json
+{
+  "name": "Alexander Grothendieck",
+  "fields": "mathematics",
+  "main_topics": [
+    "Etale cohomology",
+    "Motives",
+    "Topos theory",
+    "Schemes"
+  ],
+  "numbers": [1, 2, 3, 4],
+  "mixed": [1.1, -2, true, false, null]
+}
+```
+
+Use `SON.parse` instead of `JSON.parse` to parse text to ruby hash / array / etc.:
+
+``` ruby
+
+{
+  "name" => "Alexander Grothendieck",
+  "fields" => "mathematics",
+  "main_topics" =>
+    ["Etale cohomology", "Motives", "Topos theory", "Schemes"],
+  "numbers" => [1, 2, 3, 4],
+  "mixed" => [1.1, -2, true, false, nil]    
+}
+```
+
+
+
+### Live Examples
 
 
 ``` ruby
 require 'jasony'
 
-text =<<TXT
+text1 =<<TXT
 {
   listName: "Sesame Street Monsters", // note that listName needs no quotes
   content: [
@@ -110,7 +180,7 @@ He's mostly retired today.`
 }
 TXT
 
-pp HANSON.parse( text )  # note: is the same as JSON.parse( HANSON.convert( text ))
+pp HANSON.parse( text1 )  # note: is the same as JSON.parse( HANSON.convert( text ))
 ```
 
 resulting in:
@@ -128,6 +198,44 @@ resulting in:
   ]
 }
 ```
+
+and
+
+``` ruby
+
+text2 =<<TXT
+{
+  # Personal information
+
+  "name": "Alexander Grothendieck"
+  "fields": "mathematics"
+  "main_topics": [
+    "Etale cohomology"
+    "Motives"
+    "Topos theory"
+    "Schemes"
+  ]
+  "numbers": [1 2 3 4]
+  "mixed": [1.1 -2 true false null]
+}
+TXT
+
+pp SON.parse( text2 )  # note: is the same as JSON.parse( SON.convert( text ))
+```
+
+resulting in:
+
+``` ruby
+{
+  "name" => "Alexander Grothendieck",
+  "fields" => "mathematics",
+  "main_topics" =>
+    ["Etale cohomology", "Motives", "Topos theory", "Schemes"],
+  "numbers" => [1, 2, 3, 4],
+  "mixed" => [1.1, -2, true, false, nil]    
+}
+```
+
 
 
 ## More JSON Formats

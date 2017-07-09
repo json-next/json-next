@@ -5,7 +5,7 @@ Hoe.spec 'jasony' do
 
   self.version = Jasony::VERSION
 
-  self.summary = 'jasony - read generation y / next generation json versions with comments, unquoted keys, multi-line strings, trailing commas, and more'
+  self.summary = 'jasony - read generation y / next generation json versions (HanSON, SON, etc.) with comments, unquoted keys, multi-line strings, trailing commas, optional commas, and more'
   self.description = summary
 
   self.urls    = ['https://github.com/datatxt/jasony']

@@ -13,20 +13,20 @@ class TestVersion < MiniTest::Test
 
   def test_version
 
-    pp HANSON::UNESCAPE_MAP
-    pp HANSON::ML_ESCAPE_MAP
+    pp Jasony::UNESCAPE_MAP
+    pp Jasony::ML_ESCAPE_MAP
 
-    pp HANSON::ML_QUOTE
-    puts HANSON::ML_QUOTE
-    pp HANSON::SINGLE_QUOTE
-    puts HANSON::SINGLE_QUOTE
-    pp HANSON::DOUBLE_QUOTE
-    puts HANSON::DOUBLE_QUOTE
+    pp Jasony::BACKTICK_ML_QUOTE
+    puts Jasony::BACKTICK_ML_QUOTE
+    pp Jasony::SINGLE_QUOTE
+    puts Jasony::SINGLE_QUOTE
+    pp Jasony::DOUBLE_QUOTE
+    puts Jasony::DOUBLE_QUOTE
 
-    pp HANSON::ML_COMMENT
-    puts HANSON::ML_COMMENT
-    pp HANSON::COMMENT
-    puts HANSON::COMMENT
+    pp Jasony::CLANG_ML_COMMENT
+    puts Jasony::CLANG_ML_COMMENT
+    pp Jasony::CLANG_COMMENT
+    puts Jasony::CLANG_COMMENT
 
 
     puts Jasony::VERSION
