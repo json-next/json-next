@@ -12,6 +12,7 @@ require 'json/next/commata'
 
 require 'json/next/parser/hanson'
 require 'json/next/parser/son'
+require 'json/next/parser/jsonx'
 
 
 

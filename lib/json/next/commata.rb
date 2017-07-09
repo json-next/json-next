@@ -38,7 +38,7 @@ def parse_string
 
    if @buffer.peek(1) == '"'   ## double quote
        @buffer.getch  # consume double quote
-       value = @buffer.scan_until( /(?=")/)  ## fix: allow escaped double quote e.g. \" too!!!
+       value = @buffer.scan( /(\\.|[^"])*/ )
        @buffer.getch  # consume double quote
 
        puts %{string value >>#{value}<<} if debug?

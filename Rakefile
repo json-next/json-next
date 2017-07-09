@@ -5,7 +5,7 @@ Hoe.spec 'json-next' do
 
   self.version = JSON::Next::VERSION
 
-  self.summary = 'json-next - read generation y / next generation json versions (HanSON, SON, etc.) with comments, unquoted keys, multi-line strings, trailing commas, optional commas, and more'
+  self.summary = 'json-next - read generation y / next generation json versions (HanSON, SON, JSONX/JSON11, etc.) with comments, unquoted keys, multi-line strings, trailing commas, optional commas, and more'
   self.description = summary
 
   self.urls    = ['https://github.com/datatxt/json-next']
