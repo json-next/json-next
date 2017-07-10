@@ -169,11 +169,18 @@ Includes all JSON extensions from HanSON:
 - you can use JavaScript comments, both single line (`//`) and multi-line comments (`/* */`), in all places where JSON allows whitespace.
 - Commas after the last list element or object property will be ignored.
 
+
 Plus all JSON extensions from SON:
 
 - comments starts with `#` sign and ends with newline (`\n`)
 - comma after an object key-value pair is optional
 - comma after an array item is optional
+
+
+Plus some more extra JSON extensions:
+
+- unquoted strings following the JavaScript identifier rules can use the dash (`-`) too e.g. allows common keys such as `core-js`, `babel-preset-es2015`, `eslint-config-jquery` and others
+
 
 
 Example:

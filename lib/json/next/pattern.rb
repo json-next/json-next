@@ -92,12 +92,31 @@ module JSON
                       )
                     >
 
+
   IDENTIFIER     = %<
                       (?<identifier>
                          [a-zA-Z_$]
                          [\\w_$]*
                       )
                     >
+
+
+  ## note: allow extra chars for identifier (extended)
+  ##   e.g. allow dash (-) e.g:
+  ##     babel-preset-es2015
+  ##     core-js
+  ##     cross-spawn
+  ##     eslint-config-jquery
+  ##   and others
+
+  IDENTIFIER_EXTENDED  = %<
+                      (?<identifier>
+                         [a-zA-Z_$]
+                         [\\w_$\\-]*
+                      )
+                    >
+
+
 
   TRAILING_COMMA = %<
                       (?<trailing_comma>,)
