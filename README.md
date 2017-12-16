@@ -3,8 +3,8 @@
 json-next gem -  read generation y / next generation json versions (HanSON, SON, JSONX/JSON11,  etc.) with comments, unquoted keys, multi-line strings, trailing commas, optional commas, and more
 
 
-* home  :: [github.com/jsonii/json-next](https://github.com/jsonii/json-next)
-* bugs  :: [github.com/jsonii/json-next/issues](https://github.com/jsonii/json-next/issues)
+* home  :: [github.com/json-next/json-next](https://github.com/json-next/json-next)
+* bugs  :: [github.com/json-next/json-next/issues](https://github.com/jsonii/json-next/issues)
 * gem   :: [rubygems.org/gems/json-next](https://rubygems.org/gems/json-next)
 * rdoc  :: [rubydoc.info/gems/json-next](http://rubydoc.info/gems/json-next)
 
