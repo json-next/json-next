@@ -376,7 +376,7 @@ resulting in:
 
 ## More JSON Formats
 
-See the [Awesome JSON (What's Next?)](https://github.com/jsonii/awesome-json-next) collection / page.
+See the [Awesome JSON (What's Next?)](https://github.com/json-next/awesome-json-next) collection / page.
 
 
 
